@@ -4,11 +4,12 @@ const app = express();
 const swaggerUi = require("swagger-ui-express");
 const swaggerJs = require("swagger-jsdoc");
 const mongoose = require("mongoose");
+const nodePort = process.env.PORT || 5000;
 const mongoUser = process.env.MONGO_USER;
 const mongoPass = process.env.MONGO_PASS;
 const router = express.Router();
 
-app.listen(5000, () => {
+app.listen(nodePort, () => {
   console.log("Listening on Port 5000");
 });
 
