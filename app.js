@@ -8,8 +8,8 @@ const nodePort = process.env.PORT || 5000;
 const mongoUser = process.env.MONGO_USER;
 const mongoPass = process.env.MONGO_PASS;
 const router = express.Router();
-
-app.listen(nodePort, () => {
+const host = process.env.NODE_ENV == "production"?  "0.0.0.0" : "localhost" 
+app.listen(nodePort,  () => {
   console.log("Listening on Port 5000");
 });
 
